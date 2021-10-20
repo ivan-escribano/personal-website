@@ -1,45 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
     <script src="app.js" defer></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="menu-logo">
-            <img src="img/logo.png" alt="Logo Ivan" />
-        </div>
-        <div class="menu-night">
-            <img src="img/night-mode.png" alt="Modo oscuro" />
-        </div>
-        <div class="menu-btn">
-            <img src="img/menu_icon.png" alt="Boton menu" />
-        </div>
+      <div class="menu-logo">
+        <img src="img/logo.png" alt="Logo Ivan" />
+      </div>
+      <div class="menu-night">
+        <img src="img/night-mode.png" alt="Modo oscuro" />
+      </div>
+      <div class="menu-btn">
+        <img src="img/menu_icon.png" alt="Boton menu" />
+      </div>
     </header>
-
-    <section class="cover">
+    <main>
+      <section class="cover">
         <div class="cover-img">
-            <img src="img/portada.png" alt="" />
-            <div class="esfera"></div>
+          <img src="img/portada.png" alt="" />
+          <div class="esfera"></div>
         </div>
         <div class="cover-content">
-            <h1>Hola! Soy <span class="color">Ivan</span> desarrollador web.</h1>
-            <p>
-                Conoceme un poco mas a traves de esta pagina personal, si tienes
-                alguna pregunta no dudes en contactar.
-            </p>
-            <hr />
-            <button>CONTACTAR</button>
+          <h1>Hola! Soy <span class="color">Ivan</span> desarrollador web.</h1>
+          <p>
+            Conoceme un poco mas a traves de esta pagina personal, si tienes
+            alguna pregunta no dudes en contactar.
+          </p>
+          <hr />
+          <button class="btn-default">Contactar</button>
         </div>
-    </section>
+      </section>
 
-    <section class="about-me"></section>
-</body>
+      <section class="about-me">
+        <div class="about-title title">
+          <h2>CONOCEME</h2>
+          <hr class="hr-secciones" />
+        </div>
+        <div class="about-img">
+          <img src="img/IMG_20210606_132218__01.jpg" alt="" />
+        </div>
+        <div class="about-content">
+          <h3>Soy Ivan</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+            cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates
+            soluta, aut earum nemo recusandae cumque perferendis! Recusandae
+            alias accusamus atque.
+          </p>
+          <button class="btn-default">Descargar CV</button>
+        </div>
+      </section>
+      <section class="habilidades">
+        <div class="habilidades-title title">
+          <h2>HABILIDADES</h2>
+          <hr class="hr-secciones" />
+        </div>
+        <div class="habilidades-content">
+          <button class="accordion">Section 1</button>
+          <div class="panel">
+            <p>Lorem ipsum...</p>
+          </div>
 
+          <button class="accordion">Section 2</button>
+          <div class="panel">
+            <p>Lorem ipsum...</p>
+          </div>
+
+          <button class="accordion">Section 3</button>
+          <div class="panel">
+            <p>Lorem ipsum...</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
