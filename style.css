@@ -139,6 +139,10 @@ span.color {
   display: none;
   overflow: hidden;
 }
+
+.cualificacion > *{
+  margin-bottom: 30px;
+}
 /*------CUALIFICACION------*/
 .cualificacion-options {
   display: flex;
@@ -165,20 +169,25 @@ linea vertical del timeline crea un elemento after
 .cualificacion-timeline::after {
   content: "";
   position: absolute;
-  left: 0;
+  left: 5px;
   top: 0;
   width: 5px;
   height: 100%;
   background-color: black;
+
 }
 
 /*contenedor/div que contiene el contenido/texto*/
 .container {
-  width: 100%;
+  width: 80%;
   background-color: dodgerblue;
   color: white;
-  padding: 10px 40px;
+  padding: 20px 20px;
   position: relative;
+  margin-left: 50px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px #888888;
 }
 
 /*Circulos de la linea vertical timeline*/
@@ -188,9 +197,96 @@ linea vertical del timeline crea un elemento after
   width: 25px;
   height: 25px;
   top: 0;
-  left: -14px;
-  background-color: gray;
+  left: -58px;
+  background-color: dodgerblue;
   z-index: 1;
-  border: 4px solid #ff9f55;
+  border: 4px solid black;
   border-radius: 50%;
+}
+
+/*Flechas del container*/
+.left::before , .right::before{
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 10px;
+  width: 0;
+  z-index: 1;
+  left: -10.5px;
+  border: medium solid white;
+  transform: rotate(180deg);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent dodgerblue;
+}
+
+
+/*-------PORTFOLIO------*/
+
+.portfolio-slider{
+  position: relative;
+}
+.slide{
+  padding: 20px;
+}
+.slide-img{
+  width: 100%;
+}
+.slide-img img {
+  width: 100%;
+}
+
+.next , .prev{
+  position: absolute;
+  top: 45%;
+  font-size: 30px;
+}
+
+.next{
+  right: 0;
+}
+
+/*--------CONTACTO-----------*/
+.contactinfo-item{
+  display: flex;
+}
+
+.contactinfo-item > * {
+  padding: 12px;
+}
+
+.contact-form form > *{
+  margin-top: 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ebebeb;
+}
+.contact-form input[type=text],input[type=email]{
+  width: 100%;
+  padding: 12px;
+}
+
+input[type=text]:focus , input[type=email]:focus {
+  border: 2px solid dodgerblue!important;
+  outline: none;
+}
+
+.contact-form textarea {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+}
+
+textarea:focus{
+  border: 2px solid dodgerblue!important;
+  outline: none;
+}
+.btn-form{
+  background-color: transparent!important;
+}
+.btn-form input[type=button]{
+  padding: 15px 30px 15px 30px;
+  border: none;
+  background-color: dodgerblue;
+  color:white;
+  border-radius: 5px;
 }
