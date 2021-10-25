@@ -1,225 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="app.js" defer></script>
-  </head>
 
-  <body>
-    <header>
-      <div class="menu-logo">
-        <img src="img/logo.png" alt="Logo Ivan" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="menu-options diplayMenu">
+      <!-- <div>
+        <a href=""></a><img src="img/home.png" alt="">
+        <p>home</p>
       </div>
-      <div class="menu-night">
-        <img src="img/night-mode.png" alt="Modo oscuro" />
+      <div>
+        <a href=""></a><img src="img/user.png" alt="">
+        <p>Conoceme</p>
       </div>
-      <div class="menu-btn">
-        <img src="img/menu_icon.png" alt="Boton menu" />
+      <div>
+        <a href=""></a><img src="img/file.png" alt="">
+        <p>Habilidades</p>
       </div>
-    </header>
-    <main>
-      <section class="cover">
-        <div class="cover-img">
-          <img src="img/portada.png" alt="" />
-          <div class="esfera"></div>
-        </div>
-        <div class="cover-content">
-          <h1>Hola! Soy <span class="color">Ivan</span> desarrollador web.</h1>
+      <div>
+        <a href=""></a><img src="img/suitcase.png" alt="">
+        <p>Cualificación</p>
+      </div>
+      <div>
+        <a href=""></a><img src="img/insert-picture-icon.png" alt="">
+        <p>Portfolio</p>
+      </div>
+      <div>
+        <a href=""></a><img src="img/call.png" alt="">
+        <p>Contacto</p>
+      </div>
+      <a class="close-menu">X</a>
+    </div> -->
+    <div class="menu-logo">
+      <img src="img/logo.png" alt="Logo Ivan" />
+    </div>
+    <div class="menu-night ">
+      <img src="img/night-mode.png" alt="Modo oscuro" />
+    </div>
+    <div class="menu-btn ">
+      <img src="img/menu_icon.png" alt="Boton menu" />
+    </div>
+  </header>
+  <main>
+    <section class="cover">
+      <div class="cover-img">
+        <img src="img/portada.png" alt="" />
+        <div class="esfera"></div>
+      </div>
+      <div class="cover-content">
+        <h1>Hola! Soy <span class="color">Ivan</span> desarrollador web.</h1>
+        <p>
+          Conoceme un poco mas a traves de esta pagina personal, si tienes
+          alguna pregunta no dudes en contactar.
+        </p>
+        <hr />
+        <button class="btn-default">Contactar</button>
+      </div>
+    </section>
+
+    <section class="about-me">
+      <div class="about-title title">
+        <h2>CONOCEME</h2>
+        <hr class="hr-secciones" />
+      </div>
+      <div class="about-img">
+        <img src="img/IMG_20210606_132218__01.jpg" alt="" />
+      </div>
+      <div class="about-content">
+        <h3>Soy Ivan</h3>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+          cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates
+          soluta, aut earum nemo recusandae cumque perferendis! Recusandae
+          alias accusamus atque.
+        </p>
+        <a href="./files/Curriculum Ivan Escribano.pdf" download><button class="btn-default">Descargar CV</button></a>
+      </div>
+    </section>
+    <section class="habilidades">
+      <div class="habilidades-title title">
+        <h2>HABILIDADES</h2>
+        <hr class="hr-secciones" />
+      </div>
+      <div class="habilidades-content">
+        <button class="accordion">Section 1</button>
+        <div class="panel">
           <p>
-            Conoceme un poco mas a traves de esta pagina personal, si tienes
-            alguna pregunta no dudes en contactar.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat.
           </p>
-          <hr />
-          <button class="btn-default">Contactar</button>
         </div>
-      </section>
 
-      <section class="about-me">
-        <div class="about-title title">
-          <h2>CONOCEME</h2>
-          <hr class="hr-secciones" />
-        </div>
-        <div class="about-img">
-          <img src="img/IMG_20210606_132218__01.jpg" alt="" />
-        </div>
-        <div class="about-content">
-          <h3>Soy Ivan</h3>
+        <button class="accordion">Section 2</button>
+        <div class="panel">
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-            cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates
-            soluta, aut earum nemo recusandae cumque perferendis! Recusandae
-            alias accusamus atque.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat.
           </p>
-          <button class="btn-default">Descargar CV</button>
-        </div>
-      </section>
-      <section class="habilidades">
-        <div class="habilidades-title title">
-          <h2>HABILIDADES</h2>
-          <hr class="hr-secciones" />
-        </div>
-        <div class="habilidades-content">
-          <button class="accordion">Section 1</button>
-          <div class="panel">
-            <p>Lorem ipsum...</p>
-          </div>
-
-          <button class="accordion">Section 2</button>
-          <div class="panel">
-            <p>Lorem ipsum...</p>
-          </div>
-
-          <button class="accordion">Section 3</button>
-          <div class="panel">
-            <p>Lorem ipsum...</p>
-          </div>
-        </div>
-      </section>
-      <section class="cualificacion">
-        <div class="cualificacion-title title">
-          <h2>CUALIFICACIÓN</h2>
-          <hr class="hr-secciones" />
-        </div>
-        <div class="cualificacion-options">
-          <div>
-            <img src="img/suitcase.png" alt="" />
-            <p>Trabajos</p>
-          </div>
-          <div>
-            <img src="img/studies.png" alt="" />
-            <p>Estudios</p>
-          </div>
         </div>
 
-        <div class="cualificacion-timeline">
-          <div class="container left">
-            <div class="content">
-              <h3>Grado Superior Desarrollo apliciones web</h3>
-              <p>Stucom Centre Estudis</p>
-              <p>2018-2020</p>
-            </div>
-          </div>
-          <div class="container right">
-            <div class="content">
-              <h3>Grado Superior Desarrollo apliciones web</h3>
-              <p>Stucom Centre Estudis</p>
-              <p>2018-2020</p>
-            </div>
-          </div>
-          <div class="container left">
-            <div class="content">
-              <h3>Grado Superior Desarrollo apliciones web</h3>
-              <p>Stucom Centre Estudis</p>
-              <p>2018-2020</p>
-            </div>
-          </div>
+        <button class="accordion">Section 3</button>
+        <div class="panel">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat.
+          </p>
         </div>
-      </section>
-      <section class="portfolio">
-        <div class="portfolio-title title">
-          <h2>Portfolio</h2>
-          <hr class="hr-secciones" />
+      </div>
+    </section>
+    <section class="cualificacion">
+      <div class="cualificacion-title title">
+        <h2>CUALIFICACIÓN</h2>
+        <hr class="hr-secciones" />
+      </div>
+      <div class="cualificacion-options">
+        <div class="trabajo-option">
+          <img src="img/suitcase.png" alt="" />
+          <p>Trabajos</p>
         </div>
-        <div class="portfolio-slider">
-          <div class="slide">
-            <div class="slide-img">
-              <img src="img/chatbot.png" alt="" />
-            </div>
-            <div class="slide-content">
-              <h3>React chatbot</h3>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat
-                ut voluptates soluta, aut earum nemo recusandae cumque
-                perferendis! Recusandae alias accusamus atque.
-              </p>
-              <p><strong>Tecnologias </strong>React ,HTML , CSS</p>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="slide-img">
-              <img src="img/online-store-1272390_1280.png" alt="" />
-            </div>
-            <div class="slide-content">
-              <h3>React chatbot</h3>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat
-                ut voluptates soluta, aut earum nemo recusandae cumque
-                perferendis! Recusandae alias accusamus atque.
-              </p>
-              <p><strong>Tecnologias </strong>React ,HTML , CSS</p>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="slide-img">
-              <img
-                src="img/editor-de-imagenes-png-4-Transparent-Images.png"
-                alt=""
-              />
-            </div>
-            <div class="slide-content">
-              <h3>React chatbot</h3>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat
-                ut voluptates soluta, aut earum nemo recusandae cumque
-                perferendis! Recusandae alias accusamus atque.
-              </p>
-              <p><strong>Tecnologias </strong>React ,HTML , CSS</p>
-            </div>
-          </div>
-          <a class="prev">&#129092;</a>
-          <a class="next"> &#129094; </a>
+        <div class="estudio-option">
+          <img src="img/studies.png" alt="" />
+          <p>Estudios</p>
         </div>
-      </section>
+      </div>
 
-      <section class="contact">
-        <div class="contact-title title">
-          <h2>Contacto</h2>
-          <hr class="hr-secciones" />
-        </div>
-        <div class="contact-contactinfo">
-          <div class="contactinfo-item">
-            <span><img src="img/phone.png" alt="" /></span>
-            <div class="contactinfo-content">
-              <p>Call me</p>
-              <p>+034 604 21 29 69</p>
-            </div>
-          </div>
-          <div class="contactinfo-item">
-            <span><img src="img/email.png" alt="" /></span>
-            <div class="contactinfo-content">
-              <p>Email me</p>
-              <p>ivanescribano1998@gmail.com</p>
-            </div>
-          </div>
-          <div class="contactinfo-item">
-            <span><img src="img/placeholder.png" alt="" /></span>
-            <div class="contactinfo-content">
-              <p>My location</p>
-              <p>Barcelona , Spain</p>
-            </div>
+      <div class="cualificacion-timeline estudio-timeline">
+        <div class="container left">
+          <div class="content">
+            <h3>Grado Superior Desarrollo apliciones web</h3>
+            <p>Stucom Centre Estudis</p>
+            <p>2018-2020</p>
           </div>
         </div>
+        <div class="container right">
+          <div class="content">
+            <h3>Grado Superior Desarrollo apliciones web</h3>
+            <p>Stucom Centre Estudis</p>
+            <p>2018-2020</p>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="content">
+            <h3>Grado Superior Desarrollo apliciones web</h3>
+            <p>Stucom Centre Estudis</p>
+            <p>2018-2020</p>
+          </div>
+        </div>
+      </div>
 
-        <div class="contact-form">
-          <form action="">
-            <input type="text" placeholder="Name"/>
-            <input type="text" placeholder="Surname"/>
-            <input type="email" placeholder="Email"/>
-            <textarea placeholder="Message"></textarea><br>
-            <div class="btn-form">
-              <input type="button" value="ENVIAR">
-            </div>
-            
-          </form>
+      <div class="cualificacion-timeline trabajo-timeline timelineDisplay">
+        <div class="container left">
+          <div class="content">
+            <h3>Everis</h3>
+            <p>Solutions assistant / Banco Sabadell</p>
+            <p>2018-2020</p>
+          </div>
         </div>
-      </section>
-    </main>
-  </body>
+        <div class="container right">
+          <div class="content">
+            <h3>Everis</h3>
+            <p>Solutions assistant / Banco Sabadell</p>
+            <p>2018-2020</p>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="content">
+            <h3>Everis</h3>
+            <p>Solutions assistant / Banco Sabadell</p>
+            <p>2018-2020</p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section class="portfolio">
+      <div class="portfolio-title title">
+        <h2>Portfolio</h2>
+        <hr class="hr-secciones" />
+      </div>
+      <div class="portfolio-slider">
+        <div class="slide fade">
+          <div class="slide-img">
+            <img src="img/chatbot.png" alt="" />
+          </div>
+          <div class="slide-content">
+            <h3>React chatbot</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat
+              ut voluptates soluta, aut earum nemo recusandae cumque
+              perferendis! Recusandae alias accusamus atque.
+            </p>
+            <p><strong>Tecnologias </strong>React ,HTML , CSS</p>
+          </div>
+          <button class="btn-default">Ver proyecto</button>
+        </div>
+        <div class="slide fade">
+          <div class="slide-img">
+            <img src="img/online-store-1272390_1280.png" alt="" />
+          </div>
+          <div class="slide-content">
+            <h3>React chatbot</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat
+              ut voluptates soluta, aut earum nemo recusandae cumque
+              perferendis! Recusandae alias accusamus atque.
+            </p>
+            <p><strong>Tecnologias </strong>React ,HTML , CSS</p>
+          </div>
+          <button class="btn-default">Ver proyecto</button>
+        </div>
+        <div class="slide fade">
+          <div class="slide-img">
+            <img src="img/editor-de-imagenes-png-4-Transparent-Images.png" alt="" />
+          </div>
+          <div class="slide-content">
+            <h3>React chatbot</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat
+              ut voluptates soluta, aut earum nemo recusandae cumque
+              perferendis! Recusandae alias accusamus atque.
+            </p>
+            <p><strong>Tecnologias </strong>React ,HTML , CSS</p>
+          </div>
+          <button class="btn-default">Ver proyecto</button>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#129092;</a>
+        <a class="next" onclick="plusSlides(1)"> &#129094; </a>
+      </div>
+      <div class="portfolio-dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="contact-title title">
+        <h2>Contacto</h2>
+        <hr class="hr-secciones" />
+      </div>
+      <div class="contact-contactinfo">
+        <div class="contactinfo-item">
+          <span><img src="img/phone.png" alt="" /></span>
+          <div class="contactinfo-content">
+            <p>Call me</p>
+            <p>+034 604 21 29 69</p>
+          </div>
+        </div>
+        <div class="contactinfo-item">
+          <span><img src="img/email.png" alt="" /></span>
+          <div class="contactinfo-content">
+            <p>Email me</p>
+            <p>ivanescribano1998@gmail.com</p>
+          </div>
+        </div>
+        <div class="contactinfo-item">
+          <span><img src="img/placeholder.png" alt="" /></span>
+          <div class="contactinfo-content">
+            <p>My location</p>
+            <p>Barcelona , Spain</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <form action="">
+          <input type="text" placeholder="Name" />
+          <input type="text" placeholder="Surname" />
+          <input type="email" placeholder="Email" />
+          <textarea placeholder="Message"></textarea><br />
+          <div class="btn-form">
+            <input type="button" value="ENVIAR" />
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© All Rights Reserved by Ivan Escribano</p>
+  </footer>
+</body>
+
 </html>

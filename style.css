@@ -35,6 +35,10 @@ main > * {
 header {
   display: flex;
   align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 2;
 }
 
 .menu-logo img {
@@ -52,6 +56,42 @@ header {
 
 .menu-logo {
   flex: 1;
+}
+
+header > div {
+  display: none;
+
+}
+.menu-options {
+  display: flex;
+  /*Si no cabe el contenido en una linea salta otra linea*/
+  flex-wrap: wrap;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+}
+.menu-options > div {
+  flex: 1 0 33%;
+  margin: 10px 0px 10px 0px;
+}
+.menu-options img {
+  width: 15px;
+}
+.menu-options p {
+  font-size: 11px;
+}
+.close-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: red;
+  font-weight: 900;
+}
+
+.diplayMenu {
+  display: flex;
+  animation-name: fade;
+  animation-duration: 2s;
 }
 
 /*-------COVER------*/
@@ -113,37 +153,51 @@ span.color {
 .habilidades-content {
   margin-top: 30px;
 }
-/* Style the buttons that are used to open and close the accordion panel */
+/*Estilos boton accodion*/
 .accordion {
   background-color: #eee;
   color: #444;
   cursor: pointer;
   padding: 18px;
   width: 100%;
-  text-align: left;
   border: none;
+  text-align: left;
   outline: none;
+  font-size: 15px;
   transition: 0.4s;
 }
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active,
+/*Crear efecto hover y crear efecto cuando se pulse btn(active)*/
+.activeAcc,
 .accordion:hover {
   background-color: #ccc;
 }
 
-/* Style the accordion panel. Note: hidden by default */
+/*Crear elemento after para crear el + del button*/
+.accordion:after {
+  content: "\002B";
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+/*Crear elemento - cuando se despliegue el contenido del accordion*/
+.activeAcc:after {
+  content: "\2212";
+}
+/*Contenido desplegado*/
 .panel {
   padding: 0 18px;
   background-color: white;
-  display: none;
+  max-height: 0;
   overflow: hidden;
+  /*Tansicion de height cuando añadamos height desde el jacvascript*/
+  transition: max-height 0.2s ease-out;
 }
 
-.cualificacion > *{
+/*------CUALIFICACION------*/
+.cualificacion > * {
   margin-bottom: 30px;
 }
-/*------CUALIFICACION------*/
 .cualificacion-options {
   display: flex;
   justify-content: space-around;
@@ -174,7 +228,6 @@ linea vertical del timeline crea un elemento after
   width: 5px;
   height: 100%;
   background-color: black;
-
 }
 
 /*contenedor/div que contiene el contenido/texto*/
@@ -205,7 +258,8 @@ linea vertical del timeline crea un elemento after
 }
 
 /*Flechas del container*/
-.left::before , .right::before{
+.left::before,
+.right::before {
   content: " ";
   height: 0;
   position: absolute;
@@ -218,35 +272,97 @@ linea vertical del timeline crea un elemento after
   border-width: 10px 0 10px 10px;
   border-color: transparent transparent transparent dodgerblue;
 }
+.cualificacion-timeline {
+  display: none;
+}
 
+.timelineDisplay {
+  display: block;
+  animation-name: fade;
+  animation-duration: 2s;
+}
 
 /*-------PORTFOLIO------*/
 
-.portfolio-slider{
+.portfolio-slider {
   position: relative;
+  margin-top: 15px;
 }
-.slide{
+.slide {
   padding: 20px;
+  display: none;
 }
-.slide-img{
+.slide:first-child {
+  display: block;
+}
+
+.slide-img {
   width: 100%;
 }
 .slide-img img {
   width: 100%;
 }
-
-.next , .prev{
+.slide-content > * {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.next,
+.prev {
   position: absolute;
   top: 45%;
   font-size: 30px;
+  color: dodgerblue;
 }
 
-.next{
+.next {
   right: 0;
 }
 
+.portfolio-dots {
+  text-align: center;
+  width: 100%;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: gray;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active,
+.dot:hover {
+  background-color: dodgerblue;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /*--------CONTACTO-----------*/
-.contactinfo-item{
+.contactinfo-item {
   display: flex;
 }
 
@@ -254,19 +370,21 @@ linea vertical del timeline crea un elemento after
   padding: 12px;
 }
 
-.contact-form form > *{
+.contact-form form > * {
   margin-top: 15px;
   border-radius: 5px;
   border: none;
   background-color: #ebebeb;
 }
-.contact-form input[type=text],input[type=email]{
+.contact-form input[type="text"],
+input[type="email"] {
   width: 100%;
   padding: 12px;
 }
 
-input[type=text]:focus , input[type=email]:focus {
-  border: 2px solid dodgerblue!important;
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border: 2px solid dodgerblue !important;
   outline: none;
 }
 
@@ -276,17 +394,27 @@ input[type=text]:focus , input[type=email]:focus {
   padding: 10px;
 }
 
-textarea:focus{
-  border: 2px solid dodgerblue!important;
+textarea:focus {
+  border: 2px solid dodgerblue !important;
   outline: none;
 }
-.btn-form{
-  background-color: transparent!important;
+.btn-form {
+  background-color: transparent !important;
 }
-.btn-form input[type=button]{
+.btn-form input[type="button"] {
   padding: 15px 30px 15px 30px;
   border: none;
   background-color: dodgerblue;
-  color:white;
+  color: white;
   border-radius: 5px;
+}
+
+/*----- FOOTER-----*/
+footer {
+  background-color: dodgerblue;
+  color: white;
+}
+footer p {
+  font-size: 15px;
+  padding: 5px;
 }
