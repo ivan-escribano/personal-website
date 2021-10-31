@@ -82,6 +82,9 @@ const trabajoTimeline = document.querySelector(".trabajo-timeline");
 
 //Click function div estudio
 estudio.addEventListener("click", function () {
+  //color option active
+  estudio.classList.add("color-option");
+  trabajo.classList.remove("color-option");
   //Esconder timeline estudio
   trabajoTimeline.classList.remove("timelineDisplay");
   //Mostrar timeline trabajo
@@ -90,6 +93,9 @@ estudio.addEventListener("click", function () {
 
 //Click function div trabajo
 trabajo.addEventListener("click", function () {
+    //color option active
+    estudio.classList.remove("color-option");
+    trabajo.classList.add("color-option");
   //Esconder timeline trabajo
   estudioTimeline.classList.remove("timelineDisplay");
   //Mostrar timeline estudio
@@ -106,13 +112,17 @@ const menuOptions = document.querySelector(".menu-options");
 const closeBtn = document.querySelector(".close-menu");
 //icon menu display
 const menuBtn = document.querySelector(".menu-btn");
+//icons menu
+const iconMenu = document.querySelector(".menu-icons");
 
 //Funcion cerrar menu options , mostrar menu icons con el btn "X"
 closeBtn.addEventListener("click" , function () {
   //Esconder menu options
-  menuOptions
+  iconMenu.classList.toggle("diplayMenu");
+  menuOptions.classList.toggle("diplayMenu");
 });
 
-menuBtn.addEventListener("clcik" , function () {
-  console.log("menu");
+menuBtn.addEventListener("click" , function () {
+  iconMenu.classList.toggle("diplayMenu");
+  menuOptions.classList.toggle("diplayMenu");
 });
