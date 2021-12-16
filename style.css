@@ -34,6 +34,10 @@ main > * {
   margin-top: 5px;
 }
 /*------HEADER-------*/
+/*desktop menu*/
+.menu-desktop {
+  display: none;
+}
 header {
   display: flex;
   align-items: center;
@@ -42,7 +46,6 @@ header {
   background-color: white;
   z-index: 2;
 }
-
 /*menu options*/
 header > div {
   display: none;
@@ -212,12 +215,11 @@ span.color {
 }
 /*------CUALIFICACION------*/
 
-.color-option{
+.color-option {
   color: dodgerblue;
   font-weight: 900;
   transition: color 1s;
 }
-
 
 .cualificacion > * {
   margin-bottom: 50px;
@@ -398,7 +400,7 @@ linea vertical del timeline crea un elemento after
   align-items: center;
 }
 .contactinfo-item img {
-  font-size: 10px;
+  width: 28px;
 }
 
 .contactinfo-item > * {
@@ -452,4 +454,127 @@ footer {
 footer p {
   font-size: 15px;
   padding: 5px;
+}
+
+/*MEDIA QUERIES LAPTOP*/
+@media screen and (min-width: 1000px) {
+  body > * {
+    padding: 10px 20px 10px 20px;
+  }
+
+  /*---------HEADER------------*/
+  .header {
+    height: 15vh;
+  }
+  /*icons hidden*/
+  .menu-btn,
+  .menu-right {
+    display: none;
+  }
+  /*Desktop menu config*/
+  .menu-desktop {
+    display: flex;
+    align-items: center;
+  }
+  .menu-desktop ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu-desktop li {
+    list-style: none;
+    padding: 10px 25px 10px 25px;
+  }
+  .menu-desktop a {
+    text-decoration: none;
+    color: black;
+  }
+  /*---------------CONFIG--------------------*/
+  .cover {
+    display: flex;
+    margin-top: 0px;
+    height: 75vh;
+    padding: 30px;
+    align-items: center;
+  }
+  .cover-img {
+    order: 1;
+    height: 100%;
+    width: 100%;
+  }
+  .cover-img img {
+    width: 78%;
+    height: 100%;
+  }
+  .cover-img div {
+    width: 60%;
+    height: 75%;
+    right: 100px;
+  }
+
+  /*ABOUT ME*/
+  .content-container-about {
+    display: flex;
+  }
+  .about-img {
+    flex: 1.5;
+    padding: 50px;
+  }
+  .about-content {
+    flex: 2;
+    padding: 50px;
+  }
+  /*AACORDION*/
+  .habilidades-content {
+    padding: 0px 200px;
+  }
+
+  /*TIMELINE*****/
+  .cualificacion-timeline::after {
+    left: 50%;
+  }
+
+  .container {
+    width: 30%;
+  }
+
+  .container::after {
+    right: 0;
+    left: unset;
+  }
+
+  /* Place the container to the left */
+  .left {
+    left: 10%;
+  }
+
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -63px;
+  }
+  /* Place the container to the left */
+  /* .left {
+    left: 0%;
+  } */
+  /* Place the container to the right */
+  /* .right {
+    left: 50%;
+  } */
+  /* The actual timeline (the vertical ruler) */
+  /* .cualificacion-timeline::after {
+    left: 50%;
+  }
+  .left,
+  .right {
+    width: 25%;
+  }
+  .left::after {
+    background-color: lawngreen !important;
+     position: absolute;
+     left: unset;
+right: -91%;
+  } */
 }
