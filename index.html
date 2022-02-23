@@ -17,28 +17,28 @@
   <header>
     <div class="menu-options">
       <div>
-        <a href=""></a><img src="img/home.png" alt="">
-        <p>home</p>
+        <a href="#top"><img src="img/home.png" alt="">
+        <p>Home</p></a>
       </div>
       <div>
-        <a href=""></a><img src="img/user.png" alt="">
-        <p>Conoceme</p>
+        <a href="#conoceme"><img src="img/user.png" alt="">
+        <p>Conóceme</p></a>
       </div>
       <div>
-        <a href=""></a><img src="img/file.png" alt="">
-        <p>Habilidades</p>
+        <a href="#habilidades"><img src="img/file.png" alt="">
+        <p>Habilidades</p></a>
       </div>
       <div>
-        <a href=""></a><img src="img/suitcase.png" alt="">
-        <p>Cualificación</p>
+        <a href="#cualificacion"><img src="img/suitcase.png" alt="">
+        <p>Cualificación</p></a>
       </div>
       <div>
-        <a href=""></a><img src="img/insert-picture-icon.png" alt="">
-        <p>Portfolio</p>
+        <a href="#portfolio"><img src="img/insert-picture-icon.png" alt="">
+        <p>Portfolio</p></a>
       </div>
       <div>
-        <a href=""></a><img src="img/call.png" alt="">
-        <p>Contacto</p>
+        <a href="#contacto"><img src="img/call.png" alt="">
+        <p>Contacto</p></a>
       </div>
       <a class="close-menu">X</a>
     </div>
@@ -52,11 +52,12 @@
       <div class="menu-desktop">
         <nav>
           <ul>
-            <li><a href="">Home</a> </li>
-            <li> <a href="">Conoceme</a></li>
-            <li><a href="">Habilidades</a></li>
-            <li><a href="">Portfolio</a></li>
-            <li> <a href="">Contacto</a></li>
+            <li><a class="link-effect-desktop" href="#top">Home</a> </li>
+            <li> <a class="link-effect-desktop" href="#conoceme">Conóceme</a></li>
+            <li><a class="link-effect-desktop" href="#habilidades">Habilidades</a></li>
+            <li><a class="link-effect-desktop" href="#cualificacion">Cualificación</a></li>
+            <li><a class="link-effect-desktop" href="#portfolio">Portfolio</a></li>
+            <li> <a class="link-effect-desktop" href="#contacto">Contacto</a></li>
           </ul>
         </nav>
       </div>
@@ -71,81 +72,87 @@
     </div>
   </header>
   <main>
-    <section class="cover">
+    <section class="cover animadoFirst" id="home">
       <div class="cover-img">
         <img src="img/portada_v15.png" alt="" />
       </div>
       <div class="cover-content">
         <h1>Hola! Soy <span class="color">Ivan</span> <br>desarrollador web.</h1>
         <p>
-          Conoceme un poco mas a traves de esta pagina personal, si tienes
-          alguna pregunta no dudes en contactar.
+          Conóceme un poco más a través de esta página personal, si tienes alguna pregunta no dudes en contactar.
         </p>
         <hr />
-        <button class="btn-default">Contactar</button>
+        <button class="btn-default"><a href="#contacto">Contactar</a></button>
       </div>
     </section>
-
-    <section class="about-me">
+    <div id="conoceme"></div>
+    <section class="about-me animado" >
       <div class="about-title title">
-        <h2>CONOCEME</h2>
+        <h2>Conóceme</h2>
         <hr class="hr-secciones" />
       </div>
       <div class="content-container-about">
-      <div class="about-img">
-        <img src="img/IMG_20210606_132218__01.jpg" alt="" />
+        <div class="about-img">
+          <img src="img/IMG_20210606_132218__01.jpg" alt="" />
+        </div>
+        <div class="about-content">
+          <h3>Soy Ivan</h3>
+          <p>
+            Soy un programador web apasionado del mundo de la tecnología
+            en busca de una oportunidad laboral donde demostrar mis
+            habilidades y conocimientos, siempre estoy dispuesto a aprender,
+            pero sobre todo a aportar y superarme cada día más para llegar a
+            ser mejor que el yo de ayer. Si te interesa mi perfil te dejo mi curriculum para que lo descargues.
+
+          </p>
+          <a href="./files/Curriculum Ivan Escribano Actualizado 15-02-2022.pdf" download><button class="btn-default">Descargar CV</button></a>
+        </div>
       </div>
-      <div class="about-content">
-        <h3>Soy Ivan</h3>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-          cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates
-          soluta, aut earum nemo recusandae cumque perferendis! Recusandae
-          alias accusamus atque.
-        </p>
-        <a href="./files/Curriculum Ivan Escribano.pdf" download><button class="btn-default">Descargar CV</button></a>
-      </div></div>
     </section>
-    <section class="habilidades">
+    <section class="habilidades animado" id="habilidades">
       <div class="habilidades-title title">
-        <h2>HABILIDADES</h2>
+        <h2>Habilidades</h2>
         <hr class="hr-secciones" />
       </div>
       <div class="habilidades-content">
-        <button class="accordion">Section 1</button>
+        <button class="accordion">Lenguajes de programación y BBDD</button>
         <div class="panel">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat.
+            Conocimientos sobre lenguajes de programación y creación de bases de
+            datos tales como:
+            <strong>
+              Php, MySQL, HTML, CSS, JavaScript, Java, React, Bootstrap, NodeJS, MongoDB , SASS
+            </strong>
           </p>
         </div>
 
-        <button class="accordion">Section 2</button>
+        <button class="accordion">Herramientas</button>
         <div class="panel">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat.
+            Tengo conocimientos en herramientas para el desarrollo tales como
+            <strong> GIT/Github , NPM/NPM scripts , Webpack , CLI , Figma , Office 365 , Wordpress , Windows
+              cliente/Server , Linux
+
+            </strong>
           </p>
         </div>
 
-        <button class="accordion">Section 3</button>
+        <button class="accordion">Aptitudes</button>
         <div class="panel">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat.
+            Mis aptitudes más importantes que me definen como trabajador:<br>
+            <strong> Programación web , Diseño web , Control de calidad , Testing , Mantenimiento Informático</strong>
+            <br><br>
+            Y como persona son los siguientes:<br>
+            <strong> Trabajo , Sacrificio , Compromiso , Actitud , Constancia , Perseverancia , Superación , Disciplina
+            </strong>
           </p>
         </div>
       </div>
     </section>
-    <section class="cualificacion">
+    <section class="cualificacion animado" id="cualificacion">
       <div class="cualificacion-title title">
-        <h2>CUALIFICACIÓN</h2>
+        <h2>Cualificación</h2>
         <hr class="hr-secciones" />
       </div>
       <div class="cualificacion-options">
@@ -163,23 +170,19 @@
         <div class="container left">
           <div class="content">
             <div class="control-test">
-            <h3>Grado Superior Desarrollo apliciones web</h3>
-            <p>Stucom Centre Estudis</p>
-            <p>2018-2020</p>
-          </div></div>
+              <p class="cualificacion-bold">Ciclo Formativo de Grado Superior
+                Desarrollo de aplicaciones web</p class="cualificacion-bold">
+              <p>Stucom Centre Estudis</p>
+              <p>2018-2020</p>
+            </div>
+          </div>
         </div>
         <div class="container right">
           <div class="content">
-            <h3>Grado Superior Desarrollo apliciones web</h3>
+            <p class="cualificacion-bold">Ciclo Formativo de Grado Medio Sistemas
+              microinformáticos y redes</p class="cualificacion-bold">
             <p>Stucom Centre Estudis</p>
-            <p>2018-2020</p>
-          </div>
-        </div>
-        <div class="container left">
-          <div class="content">
-            <h3>Grado Superior Desarrollo apliciones web</h3>
-            <p>Stucom Centre Estudis</p>
-            <p>2018-2020</p>
+            <p>2016-2018</p>
           </div>
         </div>
       </div>
@@ -187,29 +190,45 @@
       <div class="cualificacion-timeline trabajo-timeline timelineDisplay">
         <div class="container left">
           <div class="content">
-            <h3>Everis</h3>
-            <p>Solutions assistant / Banco Sabadell</p>
-            <p>2018-2020</p>
+            <p class="cualificacion-bold">RLE international Iberia</p class="cualificacion-bold">
+            <p>Soporte técnico informático</p>
+            <p>Oct. 2021 - Feb. 2022</p>
+            <button class="btn-modal" id="trabajo4">Ver más</button>
           </div>
         </div>
+
         <div class="container right">
           <div class="content">
-            <h3>Everis</h3>
-            <p>Solutions assistant / Banco Sabadell</p>
-            <p>2018-2020</p>
+            <p class="cualificacion-bold">Everis</p class="cualificacion-bold">
+            <p>QA Tester / ImaginBank</p>
+            <p>Jun. 2020 - Dic. 2020</p>
+            <button class="btn-modal" id="trabajo3">Ver más</button>
           </div>
         </div>
         <div class="container left">
           <div class="content">
-            <h3>Everis</h3>
+            <p class="cualificacion-bold">Everis</p class="cualificacion-bold">
             <p>Solutions assistant / Banco Sabadell</p>
-            <p>2018-2020</p>
+            <p>Ene. 2019 - Jul. 2019</p>
+            <button class="btn-modal" id="trabajo2">Ver más</button>
           </div>
         </div>
+
+        <div class="container right">
+          <div class="content">
+            <p class="cualificacion-bold">Institut Lluïsa Cura</p class="cualificacion-bold">
+            <p>Técnico informático</p>
+            <p> Oct. 2017 - May. 2018</p>
+            <button class="btn-modal" id="trabajo1">Ver más</button>
+          </div>
+        </div>
+
+        
       </div>
       </div>
+
     </section>
-    <section class="portfolio">
+    <section class="portfolio animado" id="portfolio">
       <div class="portfolio-title title">
         <h2>Portfolio</h2>
         <hr class="hr-secciones" />
@@ -217,57 +236,59 @@
       <div class="portfolio-slider">
         <div class="slide fade">
           <div class="slide-movile">
-          <div class="slide-img">
-            <img src="img/chatbot.png" alt="" />
+            <div class="slide-img">
+              <img src="img/chatbot.png" alt="" />
+            </div>
+            <div class="slide-content">
+              <h3>React chatbot</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat
+                ut voluptates soluta, aut earum nemo recusandae cumque
+                perferendis! Recusandae alias accusamus atque.
+              </p>
+              <p><strong>Tecnologias </strong>React ,HTML , CSS</p>
+              <button class="btn-default">Ver proyecto</button>
+            </div>
           </div>
-          <div class="slide-content">
-            <h3>React chatbot</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat
-              ut voluptates soluta, aut earum nemo recusandae cumque
-              perferendis! Recusandae alias accusamus atque.
-            </p>
-            <p><strong>Tecnologias </strong>React ,HTML , CSS</p>
-            <button class="btn-default">Ver proyecto</button>
-          </div>
-        </div>
-         
+
         </div>
         <div class="slide fade">
           <div class="slide-movile">
-          <div class="slide-img">
-            <img src="img/online-store-1272390_1280.png" alt="" />
+            <div class="slide-img">
+              <img src="img/online-store-1272390_1280.png" alt="" />
+            </div>
+            <div class="slide-content">
+              <h3>React chatbot</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat
+                ut voluptates soluta, aut earum nemo recusandae cumque
+                perferendis! Recusandae alias accusamus atque.
+              </p>
+              <p><strong>Tecnologias </strong>React ,HTML , CSS</p> <button class="btn-default">Ver proyecto</button>
+            </div>
+
           </div>
-          <div class="slide-content">
-            <h3>React chatbot</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat
-              ut voluptates soluta, aut earum nemo recusandae cumque
-              perferendis! Recusandae alias accusamus atque.
-            </p>
-            <p><strong>Tecnologias </strong>React ,HTML , CSS</p> <button class="btn-default">Ver proyecto</button>
-          </div>
-         
-        </div></div>
+        </div>
         <div class="slide fade">
           <div class="slide-movile">
-          <div class="slide-img">
-            <img src="img/editor-de-imagenes-png-4-Transparent-Images.png" alt="" />
+            <div class="slide-img">
+              <img src="img/editor-de-imagenes-png-4-Transparent-Images.png" alt="" />
+            </div>
+            <div class="slide-content">
+              <h3>React chatbot</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat
+                ut voluptates soluta, aut earum nemo recusandae cumque
+                perferendis! Recusandae alias accusamus atque.
+              </p>
+              <p><strong>Tecnologias </strong>React ,HTML , CSS</p><button class="btn-default">Ver proyecto</button>
+            </div>
+
           </div>
-          <div class="slide-content">
-            <h3>React chatbot</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat
-              ut voluptates soluta, aut earum nemo recusandae cumque
-              perferendis! Recusandae alias accusamus atque.
-            </p>
-            <p><strong>Tecnologias </strong>React ,HTML , CSS</p><button class="btn-default">Ver proyecto</button>
-          </div>
-          
-        </div></div>
+        </div>
         <a class="prev" onclick="plusSlides(-1)">&#129092;</a>
         <a class="next" onclick="plusSlides(1)"> &#129094; </a>
       </div>
@@ -278,56 +299,226 @@
       </div>
     </section>
 
-    <section class="contact">
+    <section class="contact animado" id="contacto">
       <div class="contact-title title">
         <h2>Contacto</h2>
         <hr class="hr-secciones" />
       </div>
       <div class="content-contact-v2">
-      <div class="contact-contactinfo">
-        <div class="contact-movile">
-          <h3>Información de contacto</h3>
-          <p>Si tienes cualquier duda o propuesta no dudes en contactar conmigo, estare encantado de responderte.</p>
-        </div>
-        <div class="contactinfo-item">
-          <span><img src="img/phonev2.png" alt="" /></span>
-          <div class="contactinfo-content">
-            <p>Call me</p>
-            <p>+034 604 21 29 69</p>
+        <div class="contact-contactinfo">
+          <div class="contact-movile">
+            <h3>Información de contacto</h3>
+            <p>
+              Si tienes cualquier duda o propuesta no dudes en contactar conmigo, estaré encantado de responderte.
+            </p>
+          </div>
+          <div class="contactinfo-item">
+            <span class="contact-info-mobile"><img src="img/phonev2.png" alt="" /></span>
+            <span class="contact-info-desktop"><img src="img/phone-call-desktop.png" alt=""></span>
+            <div class="contactinfo-content">
+              <p>Llámame</p>
+              <p>+034 604 21 29 69</p>
+            </div>
+          </div>
+          <div class="contactinfo-item">
+            <span class="contact-info-mobile"><img src="img/emailv2.png" alt="" /></span>
+            <span class="contact-info-desktop"><img src="img/email-desktop.png" alt=""></span>
+            <div class="contactinfo-content">
+              <p>Envíame un correo</p>
+              <p>ivanescribano1998@gmail.com</p>
+            </div>
+          </div>
+          <div class="contactinfo-item">
+            <span class="contact-info-mobile"><img src="img/placeholderv2.png" alt="" /></span>
+            <span class="contact-info-desktop"><img src="img/map-desktop.png" alt=""></span>
+            <div class="contactinfo-content">
+              <p>Ubicación</p>
+              <p>Barcelona , Spain</p>
+            </div>
           </div>
         </div>
-        <div class="contactinfo-item">
-          <span><img src="img/emailv2.png" alt="" /></span>
-          <div class="contactinfo-content">
-            <p>Email me</p>
-            <p>ivanescribano1998@gmail.com</p>
-          </div>
-        </div>
-        <div class="contactinfo-item">
-          <span><img src="img/placeholderv2.png" alt="" /></span>
-          <div class="contactinfo-content">
-            <p>My location</p>
-            <p>Barcelona , Spain</p>
-          </div>
-        </div>
-      </div>
 
-      <div class="contact-form">
-        <form action="">
-          <input type="text" placeholder="Name" />
-          <input type="text" placeholder="Surname" />
-          <input type="email" placeholder="Email" />
-          <textarea placeholder="Message"></textarea><br />
-          <div class="btn-form">
-            <input type="button" value="ENVIAR" />
-          </div>
-        </form>
-      </div></div>
+        <div class="contact-form">
+          <form action="">
+            <input type="text" placeholder="Name" />
+            <input type="text" placeholder="Surname" />
+            <input type="email" placeholder="Email" />
+            <textarea placeholder="Message"></textarea><br />
+            <div class="btn-form">
+              <input type="button" value="Enviar" />
+            </div>
+          </form>
+        </div>
+
+        <div class="contact-form-desktop">
+          <form action="">
+            <div class="first-row-form">
+              <div class="name-form field-form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" />
+              </div>
+              <div class="surname-form field-form">
+                <label for="surname">Apellido:</label>
+                <input type="text" id="surname" />
+              </div>
+            </div>
+            <div class="second-row-form">
+              <div class="email field-form">
+                <label for="email">Correo:</label>
+                <input type="email" id="email" />
+              </div>
+              <div class="phone-form field-form">
+                <label for="phone">Teléfono:</label>
+                <input type="number" id="phone" />
+              </div>
+            </div>
+            <div class="third-row-form">
+              <label for="mensaje">Mensaje:</label>
+              <textarea id="mensaje"></textarea>
+            </div>
+            <div class="fourth-row-form">
+              <div class="form-btn-desktop">
+                <button class="btn-default">Enviar</button>
+              </div>
+            </div>
+
+
+
+
+
+
+
+          </form>
+        </div>
+
+
+      </div>
     </section>
   </main>
+  <div class="cualificacion-modal">
+    <div class="modal-content" id="trabajo1">
+      <div class="modal-header">
+      <h2>Institut Lluïsa Cura</h2>
+      <p>Técnico informático</p>
+      </div>
+      <hr>
+      <div class="modal-body">
+      <p>Realizaba tareas de mantenimiento informático
+        para el centro educativo donde resolvía incidencias
+        de carácter informático para los alumnos,
+        profesores y demás trabajadores del centro
+        escolar.</p>
+      </div>
+      <div class="modal-footer">
+        <div class="modal-footer-content">
+          <p>Barcelona</p>
+          <p>Octubre 2017 - Mayo 2018 </p>
+        </div>
+        <div class="modal-footer-logo">
+          <img src="img/lluisa_cura.png" alt="">
+        </div>
+      </div>
+      <button class="modal-close">X</button>
+    </div>
+   
+    <div class="modal-content" id="trabajo2">
+      <div class="modal-header">
+      <h2>Everis</h2>
+      <p>Solutions assistant / Banco Sabadell</p>
+      </div>
+      <hr>
+      <div class="modal-body">
+      <p>Realizaba proyectos, desarrollos y
+        mantenimientos de la página del banco Sabadell,
+        lo que realizaba normalmente eran soluciones a
+        incidencias que salían de nuevos desarrollos
+        como, por ejemplo: localización de trazas para
+        situar errores, cambios en el código, solución de
+        bugs en la página web, reproducción de errores y
+        actualizar contenido.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <div class="modal-footer-content">
+          <p>Barcelona</p>
+          <p>Junio 2019 - Diciembre 2019 </p>
+        </div>
+        <div class="modal-footer-logo">
+          <img src="img/everis_logo.png" alt="">
+        </div>
+      </div>
+      <button class="modal-close">X</button>
+    </div>
+
+
+    <div class="modal-content" id="trabajo3">
+      <div class="modal-header">
+      <h2>Everis</h2>
+      <p>QA Tester / ImaginBank</p>
+      </div>
+      <hr>
+      <div class="modal-body">
+      <p>Realizaba revisiones y controles de calidad de la
+        aplicación imaginbank de la Caixa, se hacían
+        diferentes pruebas de cada pantalla que se había
+        desarrollado para controlar que no hubiera
+        ningún bug, reportar los errores que se hubieran
+        detectado a los programadores, verificar que las
+        incidencias se solucionaran correctamente,
+        realizar planes de prueba donde se describía
+        todos los procesos y funcionamientos.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <div class="modal-footer-content">
+          <p>Barcelona</p>
+          <p>Enero 2020 - Julio 2020 </p>
+        </div>
+        <div class="modal-footer-logo">
+          <img src="img/everis_logo.png" alt="">
+        </div>
+      </div>
+      <button class="modal-close">X</button>
+    </div>
+
+
+    <div class="modal-content" id="trabajo4">
+      <div class="modal-header">
+      <h2>RLE international Iberia</h2>
+      <p>Soporte técnico informático
+      </p>
+      </div>
+      <hr>
+      <div class="modal-body">
+      <p>Mis tareas en la empresa eran dar a todos los 
+        empleados soporte técnico informático, 
+        mantenimiento de los equipos informáticos tanto 
+        a nivel Hardware y Software, atención al usuario, 
+        gestión y mantenimiento de inventario, gestión 
+        de compras y pedidos a nivel IT, mantenimiento 
+        y gestión de dispositivos móviles.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <div class="modal-footer-content">
+          <p>Barcelona</p>
+          <p>Octubre 2021 - Febrero 2022 </p>
+        </div>
+        <div class="modal-footer-logo">
+          <img src="img/rle_logo.png" alt="">
+        </div>
+      </div>
+      <button class="modal-close">X</button>
+    </div>
+  </div>
   <footer>
     <p>© All Rights Reserved by Ivan Escribano</p>
   </footer>
+  <div class="return-home">
+    <a href="#top">
+      <img src="img/top.png" alt="">
+    </a>
+  </div>
 </body>
 
 </html>

@@ -4,6 +4,9 @@
   margin: 0;
   padding: 0;
 }
+.cualificacion-bold {
+  font-weight: 900;
+}
 .title {
   text-align: center;
   margin-bottom: 40px;
@@ -18,6 +21,9 @@ body > * {
 main > * {
   margin-top: 80px;
 }
+html {
+  scroll-behavior: smooth;
+}
 .btn-default {
   background-color: dodgerblue;
   border: none;
@@ -25,7 +31,19 @@ main > * {
   padding: 10px;
   color: white;
   font-size: 1rem;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  position: relative;
 }
+
+
+/*BUTTON DEFAULT*/
+.btn-default:hover {
+  background-color: black;
+  transform: scale(1.1);
+  font-weight: 900;
+}
+
 .hr-secciones {
   width: 40%;
   height: 5px;
@@ -33,6 +51,26 @@ main > * {
   margin: auto;
   margin-top: 5px;
 }
+/*SCROLL TRANSITION EFFECT*/
+
+section {
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+.mostrarArriba {
+  animation: mostrarArriba 1s;
+  opacity: 1;
+}
+
+@keyframes mostrarArriba {
+  0% {
+    transform: translateY(60px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 /*------HEADER-------*/
 /*desktop menu*/
 .menu-desktop {
@@ -58,6 +96,10 @@ header > div {
   margin: auto;
   width: 100%;
 }
+.menu-options a {
+  text-decoration: none;
+  color: black;
+}
 .menu-options > div {
   flex: 1 0 33%;
   margin: 10px 0px 10px 0px;
@@ -72,7 +114,7 @@ header > div {
   position: absolute;
   top: 10px;
   right: 10px;
-  color: red;
+  color: red !important;
   font-weight: 900;
 }
 
@@ -103,6 +145,12 @@ header > div {
   flex: 1;
 }
 
+:target::before {
+  content: "";
+  display: block;
+  height: 180px;
+  margin-top: -185px;
+}
 /*animation menu toogle*/
 .diplayMenu {
   display: flex;
@@ -111,6 +159,10 @@ header > div {
 }
 
 /*-------COVER------*/
+.btn-default a{
+  text-decoration: none;
+  color: white;
+}
 span.color {
   color: dodgerblue;
 }
@@ -214,6 +266,98 @@ span.color {
   padding: 10px;
 }
 /*------CUALIFICACION------*/
+
+/*cualificacion modal*/
+.btn-modal{
+  background-color: #eee;
+  border: none;
+  padding:10px;
+  border-radius: 5px;
+  margin: 10px 0 10px 0;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.btn-modal:hover {
+  background-color: black;
+  transform: scale(1.1);
+  font-weight: 900;
+  color:white;
+}
+.cualificacion-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0; 
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.808);
+  z-index: 2;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s linear;
+}
+.modal-content {
+  width: 50%;
+  margin: auto;
+  background: #2b32b2;
+  color: white;
+  padding: 35px;
+  border-radius: 10px;
+  position: relative;
+  display: none;
+  scroll-behavior: auto;
+}
+.modal-close{
+top: 30px;
+right: 30px;
+position: absolute;
+width: 40px;
+height: 35px;
+border-radius: 80px;
+font-weight: 900;
+border: none;
+background-color: red;
+color: white;
+cursor: pointer;
+}
+.modal-header h2{
+  color: #ffffffeb;
+}
+.modal-header p {
+  color: #f5f5f5b8;
+}
+.modal-body p {
+  color: #ffffffed;
+}
+.modal-footer p{
+  color:#f5f5f5b8;
+}
+.modal-footer{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.modal-content > * {
+  margin-bottom: 30px;
+}
+
+.modal-footer-content{
+  flex: 2;
+}
+
+.modal-footer-logo{
+  flex: 1;
+}
+.modal-footer-logo img{
+  width: 100%;
+  height: 100%;
+}
+
+
+
 
 .color-option {
   color: dodgerblue;
@@ -389,7 +533,49 @@ linea vertical del timeline crea un elemento after
 }
 
 /*--------CONTACTO-----------*/
-.contact-movile{
+/*Contacto validation*/
+.field-form {
+  width: max-content;
+  position: relative;
+}
+/*ERR ICON*/
+.errorOutput {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.errorOutput img {
+  width: auto;
+  height: 20%;
+}
+
+/*ERR MESSAGE*/
+.errMssg {
+  position: absolute;
+  bottom: -18px;
+  color: #e24c4b;
+}
+.errMssg small{
+    font-size: 0.7rem;
+}
+
+/*INPUT ERR*/
+.inputErr{
+    border: 2px solid #e24c4b;
+}
+
+.errMssg , .errorOutput{
+    display: none!important;
+}
+/****/
+.contact-movile {
+  display: none;
+}
+.contact-form-desktop {
   display: none;
 }
 .contact > * {
@@ -408,6 +594,9 @@ linea vertical del timeline crea un elemento after
 
 .contactinfo-item > * {
   padding: 12px;
+}
+.contact-info-desktop {
+  display: none;
 }
 
 .contact-form form > * {
@@ -459,13 +648,76 @@ footer p {
   padding: 5px;
 }
 
-/*MEDIA QUERIES LAPTOP*/
-@media screen and (min-width: 1000px) {
+/*****RETURN********/
+.return-home {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+}
+.return-home a {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.return-home img {
+  width: 3rem;
+  height: 3rem;
+  background-color: black;
+  padding: 8px;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+.return-home img:hover {
+  background-color: rgb(6, 67, 128);
+  transform: scale(1.1);
+}
+
+/*****************MEDIA QUERIES LAPTOP*******************/
+@media screen and (min-width: 970px) {
+  /*ALL*/
+  .hr-secciones {
+    width: 20%;
+    height: 5px;
+  }
+  main > * {
+    margin: 100px 120px 100px 120px;
+  }
   body > * {
     padding: 20px 80px 20px 80px;
+    margin: auto;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  p {
+    font-size: 1.1rem;
+    line-height: 1.9rem;
+  }
+  /*---------HEADER------------*/
+
+  /*Link effect efecto de width cuando pasamos por encima del link : al principio esta a 0% cuando hover transicion de 100%*/
+  .link-effect-desktop::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: dodgerblue;
+    transition: width 0.3s;
   }
 
-  /*---------HEADER------------*/
+  .link-effect-desktop:hover::after {
+    width: 100%;
+    /*transition: width .3s;*/
+  }
+
   .header {
     height: 15vh;
   }
@@ -494,9 +746,11 @@ footer p {
   }
   .menu-logo img {
     width: 70px;
-    
-}
-  /*---------------CONFIG--------------------*/
+  }
+  /*---------------COVER--------------------*/
+  .cover-content {
+    padding: 20px;
+  }
   .cover {
     display: flex;
     margin-top: 0px;
@@ -508,12 +762,14 @@ footer p {
     order: 1;
     height: 100%;
     width: 100%;
+    text-align: end;
   }
   .cover-img img {
     width: 100%;
     max-width: 583px;
     height: auto;
-}
+    min-width: 300px;
+  }
   .cover-img div {
     width: 60%;
     height: 75%;
@@ -521,6 +777,7 @@ footer p {
   }
 
   /*ABOUT ME*/
+
   .content-container-about {
     display: flex;
   }
@@ -530,13 +787,22 @@ footer p {
   }
   .about-content {
     flex: 2;
-    padding: 50px;
+    padding: 20px;
   }
-  /*AACORDION*/
+  /***************AACORDION CUALIFICACION****************/
   .habilidades-content {
     padding: 0px 200px;
   }
-
+  .cualificacion-options {
+    justify-content: center;
+  }
+  .cualificacion-options div {
+    margin: 0px 30px 0px 30px;
+    cursor: pointer;
+  }
+  .accordion {
+    font-size: 1.2rem;
+  }
   /*TIMELINE*****/
   .timelineDisplay {
     position: relative;
@@ -552,108 +818,200 @@ footer p {
     margin-left: -3px;
   }
 
-/* Container around content */
-.container {
-  padding: 10px 40px;
-  position: relative;
-  background-color: inherit;
-  width: 50%;
-  margin-left: 0;
-  box-shadow: unset;
-  border-radius: unset;
+  /* Container around content */
+  .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    margin-left: 0;
+    box-shadow: unset;
+    border-radius: unset;
+  }
+
+  /* The circles on the timeline */
+  .container::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -16px;
+    background-color: dodgerblue;
+    border: 4px solid #093d70;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+    left: unset;
+  }
+
+  /* Place the container to the left */
+  .left {
+    left: 0;
+  }
+
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent dodgerblue;
+    left: unset;
+    transform: unset;
+  }
+
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 31px;
+  }
+
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+
+  /* The actual content */
+  .content {
+    padding: 20px 30px;
+    background-color: dodgerblue;
+    position: relative;
+    border-radius: 6px;
+    color: white;
+  }
+  /*PORTFOLIO*/
+  .slide-movile {
+    display: flex;
+    align-items: center;
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: 0px 0px 32px -14px rgba(0, 0, 0, 0.75);
+    padding: 25px;
+  }
+  .slide-content {
+    margin-left: 35px;
+  }
+  .portfolio-slider {
+    padding: 50px 100px;
+  }
+  .prev {
+    left: 0;
+  }
+  .next,
+  .prev,
+  .dot {
+    cursor: pointer;
+  }
+
+  /*CONTACT DESKTOP*/
+  .contact-form-desktop {
+    display: flex;
+  }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  textarea:focus {
+    border: 0px solid !important;
+    border-bottom: 2px solid dodgerblue !important;
+  }
+  .contact-movile {
+    display: block;
+    padding: 0px;
+    margin-bottom: 22px;
+  }
+  .content-contact-v2 {
+    display: flex;
+    padding: 50px 250px;
+    justify-content: center;
+  }
+  .contact-form {
+    width: 60%;
+  }
+  .contact-contactinfo {
+    background-color: dodgerblue;
+    color: white;
+    padding: 50px;
+    margin-right: 50px;
+    position: relative;
+  }
+
+  .contact-form {
+    display: none;
+  }
+
+  input[type="email"] {
+    width: unset;
+    padding: unset;
+  }
+  .contact-form-desktop div {
+    display: flex;
+  }
+
+  .field-form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    
+  }
+
+  .third-row-form,
+  .fourth-row-form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .contact-form-desktop input,
+  textarea {
+    border: none;
+    border-bottom: 1px solid;
+  }
+
+  .contact-info-desktop {
+    display: flex;
+  }
+
+  .contact-info-desktop img {
+    width: 2.5rem;
+  }
+  .contact-info-mobile {
+    display: none;
+  }
+  .contactinfo-item {
+    margin-bottom: 12px;
+  }
+  .contact-form-desktop form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+  }
+  .contact-form-desktop form div input {
+    outline: none !important;
+  }
+
+  /******FOOTER DESKTOP*********/
+  footer {
+    text-align: center;
+  }
 }
 
-/* The circles on the timeline */
-.container::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -16px;
-  background-color: white;
-  border: 4px solid #FF9F55;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 1;
-  left: unset;
-}
-
-/* Place the container to the left */
-.left {
-  left: 0;
-}
-
-/* Place the container to the right */
-.right {
-  left: 50%;
-}
-
-/* Add arrows to the left container (pointing right) */
-.left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent dodgerblue;
-  left: unset;
-  transform: unset;
-
-}
-
-/* Add arrows to the right container (pointing left) */
-.right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 31px;
- 
-}
-
-/* Fix the circle for containers on the right side */
-.right::after {
-  left: -16px;
-}
-
-/* The actual content */
-.content {
-  padding: 20px 30px;
-  background-color: dodgerblue;
-  position: relative;
-  border-radius: 6px;
-  color: white;
-  
-}
-.slide-movile{
-  display:flex;
-  align-items: center;
-  background-color: aliceblue;
-  border-radius: 10px;
-  box-shadow: 0px 0px 32px -14px rgba(0,0,0,0.75);
-
-
-
-}
-.portfolio-slider{
-  padding: 50px 100px;
-}
-.prev{
-  left: 0;
-}
-
-/*CONTACT MOBILE*/
-.contact-movile{
-  display: block;
-  padding: 0px;
-}
-.content-contact-v2{
-  display: flex;
-}
-
+@media screen and (min-width: 1800px) {
+  main > * {
+    margin: 100px 170px 100px 170px;
+  }
 }

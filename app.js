@@ -93,15 +93,14 @@ estudio.addEventListener("click", function () {
 
 //Click function div trabajo
 trabajo.addEventListener("click", function () {
-    //color option active
-    estudio.classList.remove("color-option");
-    trabajo.classList.add("color-option");
+  //color option active
+  estudio.classList.remove("color-option");
+  trabajo.classList.add("color-option");
   //Esconder timeline trabajo
   estudioTimeline.classList.remove("timelineDisplay");
   //Mostrar timeline estudio
   trabajoTimeline.classList.add("timelineDisplay");
 });
-
 
 //MENU OPTIONS
 //3 divs logo , dark mode , menu icon
@@ -116,13 +115,128 @@ const menuBtn = document.querySelector(".menu-btn");
 const iconMenu = document.querySelector(".menu-icons");
 
 //Funcion cerrar menu options , mostrar menu icons con el btn "X"
-closeBtn.addEventListener("click" , function () {
+closeBtn.addEventListener("click", function () {
   //Esconder menu options
   iconMenu.classList.toggle("diplayMenu");
   menuOptions.classList.toggle("diplayMenu");
 });
 
-menuBtn.addEventListener("click" , function () {
+menuBtn.addEventListener("click", function () {
   iconMenu.classList.toggle("diplayMenu");
   menuOptions.classList.toggle("diplayMenu");
 });
+
+/*Scroll show elements with transition */
+//Seleccionar aelementos para añadir el efecto de aparecer en scroll
+let animado = document.querySelectorAll(".animado");
+
+function mostrarScroll() {
+  //ScrollTop nos indicara cuantos pixels hemos hecho scroll desde el top del elemento especificado(forma vertical)
+  let scrollTop = document.documentElement.scrollTop;
+
+  //Cogemos todos los elementos y hacemos un bucle para acceder a todos
+  for (const ele of animado) {
+    /*Offset top nos devuelve la distancia que hay entre el documento general o nodo y elemento especificado*/
+    let alturaAnimado = ele.offsetTop;
+    /*
+    Cuando los px del scroll desde el documento(scrolltop) sean mayores o lleguen a la posicion 
+    del elemento (AlturaAnimado) se aplicaran los estilos para que aparezcan
+
+    para  que aparezcan antes o a nuestra medida iremos jugando con el numero de la posicion 
+    altura del elemento (alturaAnimado) para mostrar antes los elementos
+     */
+    if (alturaAnimado - 300 < scrollTop) {
+      ele.style.opacity = 1;
+      ele.classList.add("mostrarArriba");
+    }
+  }
+}
+//Evento que se realiza siempre que hagamos scroll
+window.addEventListener("scroll", mostrarScroll);
+
+//First element transition effect
+document.querySelector(".animadoFirst").classList.add("mostrarArriba");
+
+/*Modal*/
+const btnModal = document.querySelectorAll(".btn-modal");
+const modalCont = document.querySelectorAll(".modal-content");
+
+for (const btn of btnModal) {
+  btn.addEventListener("click", showModal);
+}
+
+function showModal(e) {
+  for (const modal of modalCont) {
+    if (modal.id === e.target.id) {
+      modal.parentElement.style.display = "flex";
+      modal.style.display = "block";
+    }
+  }
+  // console.log(e.target.id);
+}
+
+//Close modal...
+const xBtn = document.querySelector(".modal-close");
+const generalModal = document.querySelector(".cualificacion-modal");
+xBtn.addEventListener("click", closeModal);
+generalModal.addEventListener("click", closeModal);
+
+function closeModal(e) {
+  console.log(e.target);
+  console.log(xBtn);
+  // e.target === generalModal ||
+  if (e.target.isEqualNode(generalModal) || e.target.isEqualNode(xBtn)) {
+    generalModal.style.display = "none";
+    for (const x of modalCont) {
+      x.style.display = "none";
+    }
+  } else {
+    console.log("ERR");
+  }
+}
+
+
+
+
+//FORM VALIDATION
+
+const formDesktop = document.querySelector(".contact-form-desktop");
+
+formDesktop.addEventListener("submit" , checkInput);
+//Desktop form var
+const username = document.getElementById("name");
+const surname = document.getElementById("surname");
+const email = document.getElementById("email");
+const phone = document.getElementById("phone");
+
+function checkInput(e) {
+  e.preventDefault();
+  //quitamos espacios en blanco y cogemos el valor del input
+  const nameValue = username.value.trim();
+  const surnameValue = surname.value.trim();
+  const emailValue = email.value.trim();
+  const phoneValue = phone.value.trim();
+
+  if(nameValue === ""){
+    setErrMsg(nameValue , "El campo esta vacio");
+  }
+  else{
+    setOkMsg(nameValue);
+  }
+}
+
+function setErrMsg(input , msg) {
+  console.log(input.nextSibling);
+  // //Cogemos todos los divs para mostrar err completo
+  // const showErr = document.querySelectorAll(
+  //   `#${input.id} ~ div`
+  // );
+  //  //Mostramos todos los divs de error
+  //  for (const div of showErr) {
+  //   div.style.display = "flex!important";
+  //   if (div.className === "errMssg") {
+  //     //Añadir mensaje err como parametro puesto en funcion
+  //     document.querySelector(`.${div.className} small`).textContent = msg;
+  //   }
+  // }
+}
