@@ -195,14 +195,11 @@ function closeModal(e) {
   }
 }
 
-
-
-
 //FORM VALIDATION
 
 const formDesktop = document.querySelector(".contact-form-desktop");
 
-formDesktop.addEventListener("submit" , checkInput);
+formDesktop.addEventListener("submit", checkInput);
 //Desktop form var
 const username = document.getElementById("name");
 const surname = document.getElementById("surname");
@@ -217,26 +214,40 @@ function checkInput(e) {
   const emailValue = email.value.trim();
   const phoneValue = phone.value.trim();
 
-  if(nameValue === ""){
-    setErrMsg(nameValue , "El campo esta vacio");
-  }
-  else{
-    setOkMsg(nameValue);
+  if (nameValue === "") {
+    //Pasamos el elemento input
+    setErrMsg(username, "El campo esta vacio");
+  } else {
+    setOkMsg(username);
   }
 }
 
-function setErrMsg(input , msg) {
-  console.log(input.nextSibling);
-  // //Cogemos todos los divs para mostrar err completo
-  // const showErr = document.querySelectorAll(
-  //   `#${input.id} ~ div`
-  // );
-  //  //Mostramos todos los divs de error
-  //  for (const div of showErr) {
-  //   div.style.display = "flex!important";
-  //   if (div.className === "errMssg") {
-  //     //Añadir mensaje err como parametro puesto en funcion
-  //     document.querySelector(`.${div.className} small`).textContent = msg;
-  //   }
-  // }
+//Error output in form
+function setErrMsg(input, msg) {
+  input.parentElement.className = "field-form-err";
+  //Input err
+  input.className ="inputErr";
+  //Error icon
+  const errIcon = input.nextElementSibling;
+  errIcon.className = "errIcon";
+  //Error mssg
+  const errMsg = errIcon.nextElementSibling;
+  errMsg.className = "errText";
+  errMsg.firstElementChild.textContent = msg;
+}
+
+//OK output in form
+function setOkMsg(input) {
+  //Parent container
+    const parentContainer = input.parentElement;
+       //hide err divs
+       const divs = document.querySelectorAll(`.${parentContainer} div`).style.display = "none";
+    parentContainer.className="field-form-ok";
+ 
+    //Input ok
+    input.className = "inputOk";
+    //div display icon
+    parentContainer.lastElementChild.className = "okIcon";
+
+    
 }

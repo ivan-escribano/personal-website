@@ -534,42 +534,51 @@ linea vertical del timeline crea un elemento after
 
 /*--------CONTACTO-----------*/
 /*Contacto validation*/
-.field-form {
-  width: max-content;
+.field-form  div {
+  display: none!important;
+}
+/*add class javascript when error*/
+/*both diplay ok and error*/
+.field-form-err , .field-form-ok{
   position: relative;
+  padding: 20px;
+  flex-direction: column;
 }
-/*ERR ICON*/
-.errorOutput {
+.field-form-err .errIcon{
   position: absolute;
-  top: 10px;
-  right: 20px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.errorOutput img {
+  right: 25px;
+  height: 15%;
   width: auto;
-  height: 20%;
+  top: 40px;
 }
 
-/*ERR MESSAGE*/
-.errMssg {
+.field-form-err .errText{
   position: absolute;
-  bottom: -18px;
-  color: #e24c4b;
-}
-.errMssg small{
-    font-size: 0.7rem;
+  font-size: 0.7rem;
+  bottom: -5px;
+  color: red;
 }
 
-/*INPUT ERR*/
-.inputErr{
-    border: 2px solid #e24c4b;
+.field-form-err .inputErr{
+  border-bottom: 1px solid red;
 }
-
-.errMssg , .errorOutput{
-    display: none!important;
+.field-form-err div:last-child{
+  display: none;
+}
+/*Add class javascript when input ok*/
+.field-form-ok .okIcon{
+  position: absolute;
+  right: 25px;
+  height: 15%;
+  width: auto;
+  top: 40px;
+}
+.field-form-ok .inputOk{
+  border-bottom: 1px solid green;
+}
+/*hide error divs first 2 divs*/
+.field-form-ok div:nth-child(-n+2){
+  display: none;
 }
 /****/
 .contact-movile {
