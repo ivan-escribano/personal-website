@@ -205,6 +205,7 @@ const username = document.getElementById("name");
 const surname = document.getElementById("surname");
 const email = document.getElementById("email");
 const phone = document.getElementById("phone");
+const message = document.getElementById("mensaje");
 
 function checkInput(e) {
   e.preventDefault();
@@ -213,12 +214,38 @@ function checkInput(e) {
   const surnameValue = surname.value.trim();
   const emailValue = email.value.trim();
   const phoneValue = phone.value.trim();
+  const messageValue = message.value.trim();
+
 
   if (nameValue === "") {
     //Pasamos el elemento input
     setErrMsg(username, "El campo esta vacio");
   } else {
     setOkMsg(username);
+  }
+  if (surnameValue === "") {
+    //Pasamos el elemento input
+    setErrMsg(surname, "El campo esta vacio");
+  } else {
+    setOkMsg(surname);
+  }
+  if (emailValue === "") {
+    //Pasamos el elemento input
+    setErrMsg(email, "El campo esta vacio");
+  } else {
+    setOkMsg(email);
+  }
+  if (phoneValue === "") {
+    //Pasamos el elemento input
+    setErrMsg(phone, "El campo esta vacio");
+  } else {
+    setOkMsg(phone);
+  }
+  if (messageValue === "") {
+    //Pasamos el elemento input
+    setErrMsg(message, "El campo esta vacio");
+  } else {
+    setOkMsg(message);
   }
 }
 
@@ -242,12 +269,7 @@ function setOkMsg(input) {
   reset(input);
   //Parent container
   const parentContainer = input.parentElement;
-  //hide err divs
-  // const divs = (document.querySelectorAll(
-  //   `.${parentContainer} div`
-  // ).style.display = "none");
   parentContainer.className = "field-form-ok";
-
   //Input ok
   input.className = "inputOk showForm";
   //div display icon

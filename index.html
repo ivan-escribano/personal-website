@@ -340,12 +340,12 @@
 
         <div class="contact-form">
           <form action="">
-            <input type="text" placeholder="Name" />
-            <input type="text" placeholder="Surname" />
-            <input type="email" placeholder="Email" />
-            <textarea placeholder="Message"></textarea><br />
+            <input type="text" placeholder="Name" pattern=".{3,}"   required title="3 characters minimum"/>
+            <input type="text" placeholder="Surname" pattern=".{3,}"   required title="3 characters minimum"/>
+            <input type="email" placeholder="Email" pattern=".{3,}"   required title="3 characters minimum"/>
+            <textarea placeholder="Message" pattern=".{3,}"   required title="3 characters minimum"></textarea><br />
             <div class="btn-form">
-              <input type="button" value="Enviar" />
+              <input type="submit" value="Enviar" class="btn-default" />
             </div>
           </form>
         </div>
@@ -369,21 +369,57 @@
               <div class="surname-form field-form">
                 <label for="surname">Apellido:</label>
                 <input type="text" id="surname" />
+                <div>
+                  <img src="img/cancelar.png" alt="">
+              </div>
+              <div>
+                  <small></small>
+              </div>
+              <div>
+                <img src="img/check.png" alt="">
+              </div>
               </div>
             </div>
             <div class="second-row-form">
               <div class="email field-form">
                 <label for="email">Correo:</label>
                 <input type="email" id="email" />
+                <div>
+                  <img src="img/cancelar.png" alt="">
+              </div>
+              <div>
+                  <small></small>
+              </div>
+              <div>
+                <img src="img/check.png" alt="">
+              </div>
               </div>
               <div class="phone-form field-form">
                 <label for="phone">Teléfono:</label>
                 <input type="number" id="phone" />
+                <div>
+                  <img src="img/cancelar.png" alt="">
+              </div>
+              <div>
+                  <small></small>
+              </div>
+              <div>
+                <img src="img/check.png" alt="">
+              </div>
               </div>
             </div>
-            <div class="third-row-form">
+            <div class="third-row-form field-form">
               <label for="mensaje">Mensaje:</label>
               <textarea id="mensaje"></textarea>
+              <div>
+                <img src="img/cancelar.png" alt="">
+            </div>
+            <div>
+                <small></small>
+            </div>
+            <div>
+              <img src="img/check.png" alt="">
+            </div>
             </div>
             <div class="fourth-row-form">
               <div class="form-btn-desktop">

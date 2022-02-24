@@ -298,15 +298,14 @@ span.color {
   transition: all 0.2s linear;
 }
 .modal-content {
-  width: 50%;
+  width: 100%;
+  height: 100%;
   margin: auto;
   background: #2b32b2;
   color: white;
   padding: 35px;
-  border-radius: 10px;
   position: relative;
   display: none;
-  scroll-behavior: auto;
 }
 .modal-close{
 top: 30px;
@@ -356,7 +355,9 @@ cursor: pointer;
   height: 100%;
 }
 
-
+#trabajo1 img {
+  width: 150px;
+}
 
 
 .color-option {
@@ -556,17 +557,14 @@ linea vertical del timeline crea un elemento after
   position: absolute;
   font-size: 0.7rem;
   bottom: -5px;
-  color: red;
+  color: #e24c4b;
 }
 
 .field-form-err .inputErr{
-  border-bottom: 1px solid red;
+  border-bottom: 2px solid #e24c4b;
 }
 
 
-/* .field-form-err div:last-child{
-  display: none;
-} */
 /*Add class javascript when input ok*/
 .field-form-ok .okIcon{
   position: absolute;
@@ -576,12 +574,10 @@ linea vertical del timeline crea un elemento after
   top: 40px;
 }
 .field-form-ok .inputOk{
-  border-bottom: 1px solid green;
+  border-bottom: 2px solid green;
 }
-/*hide error divs first 2 divs*/
-/* .field-form-ok div:nth-child(-n+2){
-  display: none;
-} */
+
+/*Hide and show error and ok divs depends on circumstances*/
 .showForm{
   display: block;
 }
@@ -626,6 +622,11 @@ linea vertical del timeline crea un elemento after
 input[type="email"] {
   width: 100%;
   padding: 12px;
+}
+
+.contact-form input:invalid {
+  border: #e24c4b 1px solid;
+  background-color: #e24b4b59;
 }
 
 input[type="text"]:focus,
@@ -935,6 +936,18 @@ footer p {
   }
 
   /*CONTACT DESKTOP*/
+  .modal-content {
+    width: 50%;
+    height: auto;
+    margin: auto;
+    background: #2b32b2;
+    color: white;
+    padding: 35px;
+    border-radius: 10px;
+    position: relative;
+    display: none;
+    scroll-behavior: auto;
+  }
   .contact-form-desktop {
     display: flex;
   }
