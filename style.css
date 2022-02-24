@@ -562,9 +562,11 @@ linea vertical del timeline crea un elemento after
 .field-form-err .inputErr{
   border-bottom: 1px solid red;
 }
-.field-form-err div:last-child{
+
+
+/* .field-form-err div:last-child{
   display: none;
-}
+} */
 /*Add class javascript when input ok*/
 .field-form-ok .okIcon{
   position: absolute;
@@ -577,8 +579,14 @@ linea vertical del timeline crea un elemento after
   border-bottom: 1px solid green;
 }
 /*hide error divs first 2 divs*/
-.field-form-ok div:nth-child(-n+2){
+/* .field-form-ok div:nth-child(-n+2){
   display: none;
+} */
+.showForm{
+  display: block;
+}
+.hideForm{
+  display: none!important;
 }
 /****/
 .contact-movile {

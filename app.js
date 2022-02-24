@@ -224,30 +224,42 @@ function checkInput(e) {
 
 //Error output in form
 function setErrMsg(input, msg) {
+  reset(input);
   input.parentElement.className = "field-form-err";
   //Input err
-  input.className ="inputErr";
+  input.className = "inputErr showForm";
   //Error icon
   const errIcon = input.nextElementSibling;
-  errIcon.className = "errIcon";
+  errIcon.className = "errIcon showForm";
   //Error mssg
   const errMsg = errIcon.nextElementSibling;
-  errMsg.className = "errText";
+  errMsg.className = "errText showForm";
   errMsg.firstElementChild.textContent = msg;
 }
 
 //OK output in form
 function setOkMsg(input) {
+  reset(input);
   //Parent container
-    const parentContainer = input.parentElement;
-       //hide err divs
-       const divs = document.querySelectorAll(`.${parentContainer} div`).style.display = "none";
-    parentContainer.className="field-form-ok";
- 
-    //Input ok
-    input.className = "inputOk";
-    //div display icon
-    parentContainer.lastElementChild.className = "okIcon";
+  const parentContainer = input.parentElement;
+  //hide err divs
+  // const divs = (document.querySelectorAll(
+  //   `.${parentContainer} div`
+  // ).style.display = "none");
+  parentContainer.className = "field-form-ok";
 
-    
+  //Input ok
+  input.className = "inputOk showForm";
+  //div display icon
+  parentContainer.lastElementChild.className = "okIcon showForm";
+}
+
+//reset function for hiding all elements before applyng err or OK div
+function reset(input) {
+  const parentContainer = input.parentElement;
+  parentContainer.className = "field-form";
+  const divs = document.querySelectorAll(`.${parentContainer.className} div`);
+  for (const div of divs) {
+    div.className = "hideForm";
+  }
 }
