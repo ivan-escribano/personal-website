@@ -36,7 +36,6 @@ html {
   position: relative;
 }
 
-
 /*BUTTON DEFAULT*/
 .btn-default:hover {
   background-color: black;
@@ -159,7 +158,7 @@ header > div {
 }
 
 /*-------COVER------*/
-.btn-default a{
+.btn-default a {
   text-decoration: none;
   color: white;
 }
@@ -268,10 +267,10 @@ span.color {
 /*------CUALIFICACION------*/
 
 /*cualificacion modal*/
-.btn-modal{
+.btn-modal {
   background-color: #eee;
   border: none;
-  padding:10px;
+  padding: 10px;
   border-radius: 5px;
   margin: 10px 0 10px 0;
   cursor: pointer;
@@ -281,13 +280,13 @@ span.color {
   background-color: black;
   transform: scale(1.1);
   font-weight: 900;
-  color:white;
+  color: white;
 }
 .cualificacion-modal {
   display: none;
   position: fixed;
   top: 0;
-  left: 0; 
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.808);
@@ -307,20 +306,20 @@ span.color {
   position: relative;
   display: none;
 }
-.modal-close{
-top: 30px;
-right: 30px;
-position: absolute;
-width: 40px;
-height: 35px;
-border-radius: 80px;
-font-weight: 900;
-border: none;
-background-color: red;
-color: white;
-cursor: pointer;
+.modal-close {
+  top: 30px;
+  right: 30px;
+  position: absolute;
+  width: 40px;
+  height: 35px;
+  border-radius: 80px;
+  font-weight: 900;
+  border: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
 }
-.modal-header h2{
+.modal-header h2 {
   color: #ffffffeb;
 }
 .modal-header p {
@@ -329,10 +328,10 @@ cursor: pointer;
 .modal-body p {
   color: #ffffffed;
 }
-.modal-footer p{
-  color:#f5f5f5b8;
+.modal-footer p {
+  color: #f5f5f5b8;
 }
-.modal-footer{
+.modal-footer {
   display: flex;
   justify-content: space-around;
   margin-bottom: 50px;
@@ -343,14 +342,14 @@ cursor: pointer;
   margin-bottom: 30px;
 }
 
-.modal-footer-content{
+.modal-footer-content {
   flex: 2;
 }
 
-.modal-footer-logo{
+.modal-footer-logo {
   flex: 1;
 }
-.modal-footer-logo img{
+.modal-footer-logo img {
   width: 100%;
   height: 100%;
 }
@@ -358,7 +357,6 @@ cursor: pointer;
 #trabajo1 img {
   width: 150px;
 }
-
 
 .color-option {
   color: dodgerblue;
@@ -535,17 +533,18 @@ linea vertical del timeline crea un elemento after
 
 /*--------CONTACTO-----------*/
 /*Contacto validation*/
-.field-form  div {
-  display: none!important;
+.field-form div {
+  display: none !important;
 }
 /*add class javascript when error*/
 /*both diplay ok and error*/
-.field-form-err , .field-form-ok{
+.field-form-err,
+.field-form-ok {
   position: relative;
   padding: 20px;
   flex-direction: column;
 }
-.field-form-err .errIcon{
+.field-form-err .errIcon {
   position: absolute;
   right: 25px;
   height: 15%;
@@ -553,36 +552,35 @@ linea vertical del timeline crea un elemento after
   top: 40px;
 }
 
-.field-form-err .errText{
+.field-form-err .errText {
   position: absolute;
   font-size: 0.7rem;
   bottom: -5px;
   color: #e24c4b;
 }
 
-.field-form-err .inputErr{
+.field-form-err .inputErr {
   border-bottom: 2px solid #e24c4b;
 }
 
-
 /*Add class javascript when input ok*/
-.field-form-ok .okIcon{
+.field-form-ok .okIcon {
   position: absolute;
   right: 25px;
   height: 15%;
   width: auto;
   top: 40px;
 }
-.field-form-ok .inputOk{
+.field-form-ok .inputOk {
   border-bottom: 2px solid green;
 }
 
 /*Hide and show error and ok divs depends on circumstances*/
-.showForm{
+.showForm {
   display: block;
 }
-.hideForm{
-  display: none!important;
+.hideForm {
+  display: none !important;
 }
 /****/
 .contact-movile {
@@ -622,11 +620,6 @@ linea vertical del timeline crea un elemento after
 input[type="email"] {
   width: 100%;
   padding: 12px;
-}
-
-.contact-form input:invalid {
-  border: #e24c4b 1px solid;
-  background-color: #e24b4b59;
 }
 
 input[type="text"]:focus,
@@ -995,7 +988,6 @@ footer p {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    
   }
 
   .third-row-form,

@@ -340,10 +340,10 @@
 
         <div class="contact-form">
           <form action="">
-            <input type="text" placeholder="Name" pattern=".{3,}"   required title="3 characters minimum"/>
-            <input type="text" placeholder="Surname" pattern=".{3,}"   required title="3 characters minimum"/>
-            <input type="email" placeholder="Email" pattern=".{3,}"   required title="3 characters minimum"/>
-            <textarea placeholder="Message" pattern=".{3,}"   required title="3 characters minimum"></textarea><br />
+            <input type="text" placeholder="Name" pattern=".{1,}"   required title="3 characters minimum"/>
+            <input type="text" placeholder="Surname" pattern=".{1,}"   required title="3 characters minimum"/>
+            <input type="email" placeholder="Email" required />
+            <textarea placeholder="Message" pattern=".{20,}"   required title="20 characters minimum"></textarea><br />
             <div class="btn-form">
               <input type="submit" value="Enviar" class="btn-default" />
             </div>

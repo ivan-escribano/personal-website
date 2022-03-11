@@ -209,13 +209,13 @@ const message = document.getElementById("mensaje");
 
 function checkInput(e) {
   e.preventDefault();
+
   //quitamos espacios en blanco y cogemos el valor del input
   const nameValue = username.value.trim();
   const surnameValue = surname.value.trim();
   const emailValue = email.value.trim();
   const phoneValue = phone.value.trim();
   const messageValue = message.value.trim();
-
 
   if (nameValue === "") {
     //Pasamos el elemento input
