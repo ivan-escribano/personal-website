@@ -305,10 +305,23 @@ span.color {
   padding: 35px;
   position: relative;
   display: none;
+  animation: heightModal 1s;
+}
+
+/*Animacion*/
+@keyframes heightModal {
+  0% {
+    transform: translateY(-50vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0vh);
+    opacity: 1;
+  }
 }
 .modal-close {
-  top: 30px;
-  right: 30px;
+  top: 12px;
+  right: 20px;
   position: absolute;
   width: 40px;
   height: 35px;
