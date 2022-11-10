@@ -247,6 +247,9 @@ function checkInput(e) {
   } else {
     setOkMsg(message);
   }
+  if (nameValue && surnameValue && emailValue && phoneValue && messageValue) {
+    document.forms["formDesk"].submit();
+  }
 }
 
 //Error output in form

@@ -494,7 +494,7 @@ linea vertical del timeline crea un elemento after
   position: absolute;
   top: 40%;
   font-size: 40px;
-  color: dodgerblue;
+  color: #1e90ff8c;
 }
 
 .next {
