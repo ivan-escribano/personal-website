@@ -1,3 +1,4 @@
+
 # Personal Website
 
 💖This was my first project back then when I started learning to program, and I have so much appreciation, it's not made with any framework it's just 100% JavaScript, CSS3, and HTML5 made by me. Maybe it's not the most common way but it reminds me of where i come from and where I am today.
@@ -11,14 +12,18 @@
 ## Demo
 
 #### 💻 Desktop demo.
-![desktop1](https://user-images.githubusercontent.com/82597141/204477738-980ea4c6-5d90-4977-86f7-115a0dd3ebd9.gif)
 
-#### 📤 Upload and share
-![desktop2](https://user-images.githubusercontent.com/82597141/204477733-d1b11045-9828-4a7a-b2cd-f1abaf7eed96.gif)
+![Desktop2](https://user-images.githubusercontent.com/82597141/204619154-9c6bf947-fb32-4f54-9c2d-b593fd178d0f.gif)
+
+#### 🆕 Features demo.
+
+![Desktop 1](https://user-images.githubusercontent.com/82597141/204619146-73f6f8ab-8928-4f76-b1d2-2012072708df.gif)
+
 
 
 #### 📱 mobile demo
-![desktop3](https://user-images.githubusercontent.com/82597141/204477741-804d7475-0654-46a6-9b59-d9a6830bc65d.gif)
+
+![Mobile](https://user-images.githubusercontent.com/82597141/204619137-f48b5c8d-697d-4439-8075-7947cc018215.gif)
 
 
 
@@ -27,19 +32,27 @@
 #### Frontend
 - HTML5
 - CSS3
-- JavaScript
+- JavaScript vanilla
 
 #### Tools
 - Vercel deployment in the frontend
 
 ## Figma design
-Checkout my figma work:
+
+#### Checkout my figma work :
 
  [![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/file/my0DwEy69kH1aPHoWjlEM9/PERSONAL-WEB?node-id=0%3A1&t=DlQR8HUS0w1UntJL-1)
 
+#### Demo Figma :
+
+![Figma](https://user-images.githubusercontent.com/82597141/204619129-951be713-42b4-4383-88b8-a1c3f7d395ff.gif)
 
 ## Features
-- 
+- Design focused in provide info about me in an easy way.
+- Sliders with top projects made.
+- Chronology with my education and experience.
+- Smooth transitions.
+- Responsive design friendly.
 
 
 ## Authors & Credits
